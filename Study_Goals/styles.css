@@ -1,4 +1,4 @@
-body {
+body { 
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
@@ -86,14 +86,10 @@ form {
 }
 
 .form-row {
+    margin-bottom: 15px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 15px;
-}
-
-.form-row label {
-    margin-right: 10px;
+    justify-content: space-between;
 }
 
 input[type="text"], input[type="number"], input[type="date"], select {
@@ -101,18 +97,17 @@ input[type="text"], input[type="number"], input[type="date"], select {
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
-    flex-grow: 1;
 }
 
 .read-dropdowns {
     display: flex;
     justify-content: space-between;
     gap: 10px;
-    width: 70%; /* Adjust width to fit within the container */
+    width: 70%;
 }
 
 .read-dropdowns select {
-    width: 33%; /* Ensure each dropdown has equal width */
+    width: 33%;
 }
 
 button[type="submit"] {
@@ -128,25 +123,45 @@ button[type="submit"] {
     font-size: 1rem;
 }
 
-.more-details, .preview {
-    width: 25%;
-    padding: 15px;
-    z-index: 2;
-}
-
+/* More Details Section */
 .more-details {
-    margin-left: 10px;
+    width: 25%;
+    padding: 20px;
+    background-color: #e0e0e0;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    z-index: 1;
 }
 
-.more-details h3, .preview h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+.more-details h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+}
+
+.more-details p {
+    margin: 5px 0;
+    line-height: 1.5;
+    text-align: left; /* Change to left-align */
+    color: #333;
 }
 
 .preview {
+    width: 25%;
+    padding: 15px;
+    z-index: 2;
     background-color: #f4f4f4;
     border-radius: 10px;
-    padding: 15px;
+}
+
+.preview h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
 }
 
 .preview p {
