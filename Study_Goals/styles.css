@@ -78,6 +78,20 @@ button {
     margin-top: 0;
 }
 
+.close {
+    color: #aaa;
+    float: right; /* Changed to float right for top right placement */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 form {
     flex-grow: 1;
     display: flex;
@@ -89,7 +103,10 @@ form {
     margin-bottom: 15px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+}
+
+.form-row label {
+    margin-right: 10px; /* Adjusting space between label and input field */
 }
 
 input[type="text"], input[type="number"], input[type="date"], select {
@@ -97,17 +114,18 @@ input[type="text"], input[type="number"], input[type="date"], select {
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
+    flex-grow: 1; /* Allow input to grow and fill space */
 }
 
 .read-dropdowns {
     display: flex;
     justify-content: space-between;
     gap: 10px;
-    width: 70%;
+    width: 70%; /* Adjust width to fit within the container */
 }
 
 .read-dropdowns select {
-    width: 33%;
+    width: 33%; /* Ensure each dropdown has equal width */
 }
 
 button[type="submit"] {
@@ -147,40 +165,39 @@ button[type="submit"] {
 .more-details p {
     margin: 5px 0;
     line-height: 1.5;
-    text-align: left; /* Change to left-align */
+    text-align: left; /* Ensure text is left-aligned */
     color: #333;
 }
 
 .preview {
     width: 25%;
-    padding: 15px;
+    padding: 20px; /* Increased padding for better alignment */
     z-index: 2;
-    background-color: #f4f4f4;
-    border-radius: 10px;
+    background-color: #e0e0e0; /* Match background color */
+    border-radius: 10px; /* Rounded corners for uniformity */
+    margin-top: 20px; /* Align with more-details section */
 }
 
 .preview h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.preview p {
-    margin: 5px 0;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 24px;
+    font-size: 1.5rem; /* Match the More Details heading */
+    margin: 0;
+    text-align: center; /* Centered heading */
+    color: #333; /* Ensure visibility */
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+.preview-card {
+    /* Styles for the preview card */
+    margin-top: 10px; /* Space between the heading and the card */
+    background-color: #f4f4f4; /* Background color for preview card */
+    padding: 10px; /* Padding inside preview card */
+    border-radius: 5px; /* Rounded corners */
 }
+
+.preview-card p {
+    margin: 5px 0; /* Margin for paragraphs within the preview card */
+}
+
 
 @keyframes growBackground {
     100% {
