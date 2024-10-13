@@ -39,82 +39,79 @@
             <span class="close" id="closeModalBtn">&times;</span>
             <h2>Create a Study Goal</h2>
 
-            <form id="goalForm">
-                <div class="goal-type">
-                    <label>
-                        <input type="radio" name="goalType" value="reading" checked> Reading
-                    </label>
-                    <label>
-                        <input type="radio" name="goalType" value="practice"> Practice
-                    </label>
-                </div>
+            <div class="form-container">
+                <form id="goalForm">
+                    <div class="goal-type">
+                        <label>
+                            <input type="radio" name="goalType" value="reading" checked> Reading
+                        </label>
+                        <label>
+                            <input type="radio" name="goalType" value="practice"> Practice
+                        </label>
+                    </div>
 
-                <!-- Goal Title -->
-                <div class="form-row">
-                    <label for="goalTitle">Goal Title</label>
-                    <input type="text" id="goalTitle" placeholder="Enter your goal title..." required>
-                </div>
+                    <div class="form-row">
+                        <label for="goalTitle">Goal Title</label>
+                        <input type="text" id="goalTitle" placeholder="Enter your goal title..." required>
+                    </div>
 
-                <!-- Book Title -->
-                <div class="form-row">
-                    <label for="bookTitle">Book Title</label>
-                    <input type="text" id="bookTitle" placeholder="Enter your book's title..." required>
-                </div>
+                    <div class="form-row">
+                        <label for="bookTitle">Book Title</label>
+                        <input type="text" id="bookTitle" placeholder="Enter your book's title..." required>
+                    </div>
 
-                <!-- Book's Page Count -->
-                <div class="form-row">
-                    <label for="pageCount">Book's Page Count</label>
-                    <input type="number" id="pageCount" placeholder="Total Pages" required>
-                </div>
+                    <div class="form-row">
+                        <label for="pageCount">Book's Page Count</label>
+                        <input type="number" id="pageCount" placeholder="Total Pages" required>
+                    </div>
 
-                <!-- Read At Least (Three dropdowns) -->
-                <div class="form-row">
-                    <label for="readAtLeast">Read At Least</label>
-                    <div class="read-dropdowns">
-                        <select id="readAtLeastNumber">
-                            <option value="5">5</option>
-                            <option value="10">10</option>
-                            <option value="20">20</option>
-                        </select>
-                        <select id="readAtLeastType">
-                            <option value="pages">Page(s)</option>
-                            <option value="chapters">Chapter(s)</option>
-                            <option value="books">Book(s)</option>
-                        </select>
-                        <select id="readAtLeastFrequency">
-                            <option value="daily">Daily</option>
-                            <option value="weekly">Weekly</option>
-                            <option value="monthly">Monthly</option>
-                            <option value="yearly">Yearly</option>
+                    <div class="form-row">
+                        <label for="readAtLeast">Read At Least</label>
+                        <div class="read-dropdowns">
+                            <select id="readAtLeastNumber">
+                                <option value="5">5</option>
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                            </select>
+                            <select id="readAtLeastType">
+                                <option value="pages">Page(s)</option>
+                                <option value="chapters">Chapter(s)</option>
+                                <option value="books">Book(s)</option>
+                            </select>
+                            <select id="readAtLeastFrequency">
+                                <option value="daily">Daily</option>
+                                <option value="weekly">Weekly</option>
+                                <option value="monthly">Monthly</option>
+                                <option value="yearly">Yearly</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="startDate">Start Date</label>
+                        <input type="date" id="startDate" required>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="endDate">End Date</label>
+                        <input type="date" id="endDate" required>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="missDay">What to do if you miss a day?</label>
+                        <select id="missDay">
+                            <option value="1">Option 1: Forgot to Log Progress</option>
+                            <option value="2">Option 2: Recalculate Pages/Day</option>
+                            <option value="3">Option 3: Create New End Date</option>
                         </select>
                     </div>
-                </div>
 
-                <!-- Start Date -->
-                <div class="form-row">
-                    <label for="startDate">Start Date</label>
-                    <input type="date" id="startDate" required>
-                </div>
-
-                <!-- End Date -->
-                <div class="form-row">
-                    <label for="endDate">End Date</label>
-                    <input type="date" id="endDate" required>
-                </div>
-
-                <!-- What to do if you miss a day (Dropdown) -->
-                <div class="form-row">
-                    <label for="missDay">What to do if you miss a day?</label>
-                    <select id="missDay">
-                        <option value="1">Option 1: Forgot to Log Progress</option>
-                        <option value="2">Option 2: Recalculate Pages/Day</option>
-                        <option value="3">Option 3: Create New End Date</option>
-                    </select>
-                </div>
-
-                <!-- Set Goal Button -->
-                <button type="submit">Set Goal</button>
-            </form>
+                    <!-- Set Goal Button inside its own container -->
+                    <div class="button-container">
+                        <button type="submit">Set Goal</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 
