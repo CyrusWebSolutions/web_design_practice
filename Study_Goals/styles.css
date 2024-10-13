@@ -1,0 +1,184 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 20px 0;
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.goals-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-background {
+    position: absolute;
+    background-color: #e0e0e0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scaleX(0);
+    width: 85%;
+    height: 65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    z-index: 1;
+    overflow: visible;
+    animation: growBackground 0.6s forwards ease-out;
+}
+
+@keyframes growBackground {
+    100% {
+        transform: translate(-50%, -50%) scaleX(1);
+    }
+}
+
+.modal-content {
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    width: 45%;
+    height: 70%;
+    padding: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.modal-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-content .form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.modal-content label {
+    min-width: 150px;
+    margin-right: 10px;
+    text-align: right;
+}
+
+/* Wider fields for Goal Title and Book Title */
+.modal-content input#goalTitle,
+.modal-content input#bookTitle {
+    width: 300px;
+}
+
+/* Shorter fields for Book's Page Count, Start Date, End Date */
+.modal-content input#pageCount,
+.modal-content input#startDate,
+.modal-content input#endDate {
+    width: 150px;
+}
+
+/* Read At Least dropdown containers */
+.read-dropdowns {
+    display: flex;
+    gap: 5px;
+}
+
+.read-dropdowns select {
+    width: 80px; /* Shorter width for each dropdown */
+}
+
+input[type="text"], input[type="number"], input[type="date"], select {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    padding: 12px;
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.more-details, .preview {
+    width: 25%;
+    padding: 15px;
+    z-index: 2;
+}
+
+.more-details {
+    margin-left: 10px;
+}
+
+.more-details h3, .preview h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.preview {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.preview p {
+    margin: 5px 0;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
